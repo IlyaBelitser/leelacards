@@ -1,0 +1,10 @@
+<div class="backdrop" (click)="close.emit()">
+    <div class="card" (click)="handleClick($event)">
+        <div class="circle">
+            <div class="text">
+                {{card.id}}
+            </div>
+        </div>
+        <div class="description text">{{card.text}}</div>
+    </div>
+</div>

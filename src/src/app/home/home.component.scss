@@ -1,0 +1,27 @@
+
+.table {
+    height: 200px;
+    width: 50%;
+    background-color: #fefefe;
+    // outline: black solid 1px;
+
+    margin: 0 auto;
+    padding: 2% 2%;
+    text-align: center;   
+    // position: relative;
+}
+
+.card {
+    height: 150px;
+    width: 100px;
+    background-color: #336699;
+    border: #333333 solid 1px;
+    border-radius: 5px;
+
+    color: #333333;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 2% 2% 2% 2%;
+
+    vertical-align: middle;
+    display: inline-block;
+}
