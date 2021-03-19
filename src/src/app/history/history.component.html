@@ -1,8 +1,11 @@
 <h1>{{title}}</h1>
 <ul class="common">
     <li *ngFor="let item of serviceHistory.getData()">
-        <div class="number">{{item.card.id}}</div>
-        <div class="text">{{item.card.text}}</div>
-        <div class="date">{{item.date | date:'H:mm, MMMM d, y'}}</div> 
+        <div class="blockCommon">
+            <div class="blockNumber">{{item.card.id}}</div>
+            <div class="blockText">{{item.card.text}}</div>
+            <div class="blockClose"><div class="btnCross"></div></div>    
+            <div class="blockDate">{{item.date | date:'H:mm, MMMM d, y'}}</div>            
+        </div>
     </li>
 </ul>

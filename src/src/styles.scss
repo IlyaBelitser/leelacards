@@ -82,3 +82,33 @@ ul {
         opacity: 0.8;
     }
 }
+
+.btnCircle {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.3;
+}
+
+.btnCircle:hover {
+    opacity: 1;
+}
+
+.btnCircle::before, .btnCircle::after {
+    position: absolute;;
+    left: 1rem;
+    content: ' ';
+    height: 1.5rem;
+    width: 2px;
+    background-color: #fefefe;
+}
+
+.btnCircle::before {
+    transform: rotate(45deg);
+}
+
+.btnCircle::after {
+    transform: rotate(-45deg);
+}

@@ -15,57 +15,144 @@ h1 {
     cursor: pointer;
     position: relative;
     left: 0;
-    background-color: #eee;
     margin: .5em;
-    padding: .3em 0;
     height: 4.0em;
+}
+
+.blockCommon {
+    position: relative;
+    height: 4.0rem;
+    width: 400px;
+    max-width: 100%;
+    margin-left: 0;
+
+    background-color: #eee;
     border-radius: 4px;
 }
 
-.number {
-    // display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color: #405061;
-    line-height: 1em;
+.blockNumber {
     position: relative;
-    left: -1px;
-    top: -4px;
-    height: 5.0em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
     float: left;
+    height: 102%;
+    width: 12%;
+    text-align: center;
+    padding-top: 1.5rem;
+    background-color: #405060;    
+    border-radius: 4px 0 0 4px;
+
+    line-height: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:medium;
+    color: white;
 }
 
-.date {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
-    float: right;
+.blockCommon:hover {
+    background-color: #ddd;  
 }
-.text {
+
+.blockCommon:active {
+    background-color:#cfd8dc;
+}
+
+.blockCommon:hover .blockNumber {
+    background-color: #9299a1;   
+}
+
+.blockCommon:active .blockNumber {
+    background-color: #e6e6e6;
+    color: #405060;
+}
+
+.blockText {
+    position: absolute;
+
+    // outline: 1px solid red;
+    height: 2.5rem;
+    width: 100% - 12% - 10%;
+    left: 12%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-top: 0.75rem;
+    line-height: 1rem;
+    
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     white-space: nowrap; // отмена переноса
     overflow: hidden; // обрезка содержимого
     text-overflow: ellipsis; // многоточие
-
 }
 
-// .common li :hover {
-//     color: #607d8b;
-//     background-color: #ddd;
-//     left: .1em;
-// }
+.blockClose {
+    position: relative;
+    float: right;
+    width: 10%;
+    height: 2.5rem;
+    text-align: right;
+    
+    border-radius: 0 4px 0 0;
+}
 
-// .common li .selected {
-//     background-color: #cfd8dc;
-//     color: white;
-// }
+.blockDate {
+    position: absolute;
+    top: 2.5rem;
+    left: 12%;
+    width: 100% - 12%;
+    height: 4rem - 2.5rem;
+    text-align: right;
+    padding-right: 0.5rem;
+    border-radius: 0 0 4px 0;
 
-// .common li.selected:hover
-// {
-//     background-color: #bbd8dc;
-//     color: white;
-// }
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.blockCommon:hover .blockText, 
+.blockCommon:hover .blockDate {
+    background-color: #ddd;
+    color:#fefefe;
+}
+
+.blockCommon:active .blockText,
+.blockCommon:active .blockDate {
+    background-color:#cfd8dc;
+}
+
+.btnCross {
+    position: relative;
+    opacity: 0.3;
+
+    float: right;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: right;
+    
+    border-radius: 0 4px 0 0;
+}
+
+.btnCross::before, .btnCross::after {
+    position: absolute;
+    top:0.1rem;
+    left: 0.6rem;
+    content: ' ';
+    height: 1.2rem;
+    width: 1.5px;
+    background-color: #405060;
+}
+
+.btnCross::before {
+    transform: rotate(45deg);
+}
+
+.btnCross::after {
+    transform: rotate(-45deg);
+}
+
+
+.btnCross:hover {
+    opacity: 1;
+}
+
+.btnCross:active {
+    color: #fefefe;
+}

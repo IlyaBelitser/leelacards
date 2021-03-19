@@ -1,3 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -28,7 +32,6 @@
 
 .text{
     color: #fefefe;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     margin: auto;
 }
@@ -49,4 +52,15 @@
     width: 80%;
     max-height: 200px;
     padding: 10px 10px;
+}
+
+.btnStyle {
+    border: 1px solid #fefefe;
+}
+
+.btnStyleText {
+    color: #fefefe;
+    font-size: 2rem;
+    margin: auto;   
+    font-weight: bolder; 
 }

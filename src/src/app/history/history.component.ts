@@ -10,11 +10,13 @@ export class HistoryComponent implements OnInit {
   
   title: string = 'History';
 
-
   constructor(public serviceHistory : HistoryService) {
   }
 
   ngOnInit(): void {
   }
 
+  close () {
+    console.log("close");
+  }
 }
