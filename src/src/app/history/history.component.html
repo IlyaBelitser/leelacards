@@ -1,9 +1,11 @@
+<ng-template appRef></ng-template>
+
 <div class="backdrop backdropHistory">
     <div class="containerHistory">
         <h1>{{title}}</h1>
         <ul class="common">
             <li *ngFor="let item of serviceHistory.getData(); index as i">
-                <div class="blockCommon">
+                <div class="blockCommon" (click)="clickOnCard(i)">
                     <div class="blockNumber">{{item.card.id}}</div>
                     <div class="blockText">{{item.card.text}}</div>
                     <div class="blockClose"><div class="btnCross" (click)="close(i)"></div></div>    

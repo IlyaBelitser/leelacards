@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { HistoryService } from '../history.service';
+import { RefDirective } from './../ref.directive';
+import { CardComponent } from './../card/card.component';
 
 @Component({
   selector: 'app-history',
@@ -9,11 +11,27 @@ import { HistoryService } from '../history.service';
 export class HistoryComponent implements OnInit {
   
   title: string = 'History';
-
-  constructor(public serviceHistory : HistoryService) {
+  @ViewChild(RefDirective, {static: false}) refDir: RefDirective;
+  
+  constructor(
+    public serviceHistory : HistoryService,    
+    private resolver: ComponentFactoryResolver,) {
   }
 
   ngOnInit(): void {
+  }
+
+  clickOnCard (idx: number) {
+    console.log("card");
+
+    const cardFactory = this.resolver.resolveComponentFactory(CardComponent);
+    this.refDir.containerRef.clear();
+    const component = this.refDir.containerRef.createComponent(cardFactory);
+    
+    component.instance.card = this.serviceHistory.getItem(idx).card; 
+    component.instance.close.subscribe(()=>{
+      this.refDir.containerRef.clear();
+    })
   }
 
   close (idx: number) {
