@@ -10,7 +10,8 @@
     // height: 50%; //200px;
     border: black solid 1px;
     border-radius: 10px;
-    background-color: #336699;
+    background-color:#eee;// #336699;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
     padding: 1rem;
     margin-top: 3rem;
@@ -22,7 +23,7 @@
 }
 
 .text{
-    color: #fefefe;
+    color:#405060;// #fefefe;
     font-size: medium;
     margin: auto;
 }
@@ -30,7 +31,7 @@
 .circle {
     width: 30px;
     height: 30px;
-    border: #fefefe solid 1px;
+    border:#405060 solid 1px;// #fefefe solid 1px;
     border-radius: 50%;
     
     

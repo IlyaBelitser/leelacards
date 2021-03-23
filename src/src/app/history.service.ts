@@ -24,7 +24,8 @@ export class HistoryService {
    }
 
    addItem(card: CardHistory) {
-       this.buf.push(card);
+    //    this.buf.push(card);
+       this.buf.unshift(card);
    }
 
    clear() {
