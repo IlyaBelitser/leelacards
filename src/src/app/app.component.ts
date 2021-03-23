@@ -7,6 +7,8 @@ import { Component} from '@angular/core';
 })
 export class AppComponent {
 
+  isHistory: boolean = false;
+
   constructor( ) {
   }
 
@@ -14,5 +16,13 @@ export class AppComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     
+  }
+
+  onBtnToggleClick() {
+      this.isHistory = true;
+  }
+
+  onBtnCloseHistoryClick() {
+    this.isHistory = false;
   }
 }

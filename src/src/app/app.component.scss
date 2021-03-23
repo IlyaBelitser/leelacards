@@ -1,0 +1,48 @@
+.btnToggle {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 26px;
+    height: 26px;
+
+    cursor: pointer;
+    z-index: 1;
+}
+.btnToggle > span,
+.btnToggle > span::before,
+.btnToggle > span::after {
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #fefefe;
+}
+.btnToggle > span::before {
+    content: '';
+    top: -8px;
+}
+.btnToggle > span::after {
+    content: '';
+    top: 8px;
+}
+
+.btnCloseHistory > span {
+    transform: rotate(45deg);
+}
+.btnCloseHistory > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+.btnCloseHistory > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+.btnCloseHistory {
+    visibility: visible;
+    // left: 0;
+}
