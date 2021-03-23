@@ -30,4 +30,8 @@ export class HistoryService {
    clear() {
        this.buf = [];
    }
+
+   deleteItem (num: number) {
+       this.buf.splice(num, 1);
+   }
 }

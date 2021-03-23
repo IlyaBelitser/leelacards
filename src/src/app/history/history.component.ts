@@ -16,7 +16,8 @@ export class HistoryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  close () {
+  close (idx: number) {
     console.log("close");
+    this.serviceHistory.deleteItem(idx);
   }
 }
